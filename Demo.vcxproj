@@ -28,6 +28,7 @@
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -46,12 +47,16 @@
     <TargetName>easypr_test</TargetName>
     <OutDir>$(SolutionDir)\bin\debug\</OutDir>
     <IntDir>$(Configuration)\Demo\</IntDir>
+    <IncludePath>C:\zac\opencv2.4.11\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\zac\opencv2.4.11\build\x86\vc12\lib;C:\zac\opencv2.4.11\build\x86\vc12\staticlib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\bin\release\</OutDir>
     <IntDir>$(Configuration)\Demo\</IntDir>
     <TargetName>easypr_test</TargetName>
+    <LibraryPath>C:\zac\opencv2.4.11\build\x86\vc12\lib;C:\zac\opencv2.4.11\build\x86\vc12\staticlib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\zac\opencv2.4.11\build\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
